@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/hxx8mydbpohfl256?svg=true)](https://ci.appveyor.com/project/Dmitriy7438/dz23)
+[![Build status](https://ci.appveyor.com/api/projects/status/tg5btos9xeaig8ii?svg=true)](https://ci.appveyor.com/project/Dmitriy7438/dz23-1)
