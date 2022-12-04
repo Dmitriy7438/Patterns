@@ -2,6 +2,8 @@ package test;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import data.DataGenerator;
 import org.openqa.selenium.Keys;
@@ -22,7 +24,8 @@ class DeliveryTest {
     private final String firstMeetingDateSeven = DataGenerator.generateDate(daysToAddSeven);
 
     @BeforeAll
-    static void setUpBeforeAll() {
+    static void setUpAll() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
     @BeforeEach
@@ -32,7 +35,8 @@ class DeliveryTest {
     }
 
     @AfterAll
-    static void setUpAfterAll() {
+    static void tearDownAll() {
+        SelenideLogger.removeListener("allure");
     }
 
     @Test
